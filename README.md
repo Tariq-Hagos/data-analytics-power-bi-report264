@@ -3,8 +3,9 @@
 
 ## Overview
 
-This Power BI project involves importing and transforming data from different sources to create a comprehensive and insightful report. The project comprises four main tasks: importing the Orders table, cleaning the Products table, importing the Stores table, and importing customer data.
 
+
+# Milestone 2
 ## Task 1: Orders Table
 
 ### Importing Orders_powerbi Table
@@ -60,6 +61,38 @@ This Power BI project involves importing and transforming data from different so
 - Used Power BI's Get Data option with the Folder data connector to import the Customers folder.
 - Created a Full Name column by combining [First Name] and [Last Name].
 - Deleted unused columns and renamed remaining columns.
+  
+# Milestone 3
+
+## Task 1: Create a Date table
+
+### Additional Date Table Columns
+
+DAX formulas were applied to add the following columns to the date table:
+
+- Day of Week
+- Month Number (i.e., Jan = 1, Dec = 12, etc.)
+- Month Name
+- Quarter
+- Year
+- Start of Year
+- Start of Quarter
+- Start of Month
+- Start of Week
+
+## Task 2: Building a star schema data model
+
+A relationship between the tables was formed to create a star schema. The reationship are as followed:
+
+-Orders[product_code] to Products[product_code]
+-Orders[Store Code] to Stores[store code]
+-Orders[User ID] to Customers[User UUID]
+-Orders[Order Date] to Date[date]
+-Orders[Shipping Date] to Date[date]
+
+all relationships are one-to-many, with a single filter direction from the one side to the many side.
+
+
 
 ## Documentation of Achievements
 
